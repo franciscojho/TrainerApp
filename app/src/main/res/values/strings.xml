@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Al Tanto Entrenado</string>
+    <string name="su_name">REGISTRAR</string>
+    <string name="si_name">INGRESAR</string>
+
+    <string name="btn_registrar">Registrar</string>
+    <string name="btn_ingresar">Ingresar</string>
+    <string name="btn_recuperar_contra">¿Olvidaste?</string>
+
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_nombre">Nombres</string>
+    <string name="hint_apellido">Apellidos</string>
+    <string name="hint_cel">Celular</string>
+    <string name="hint_email">Correo</string>
+    <string name="hint_contra">Contraseña</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_test_two">TestTwoActivity</string>
+    <string name="title_activity_ingreso">IngresoActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+</resources>

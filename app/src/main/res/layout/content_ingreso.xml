@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".actividades.IngresoActivity"
+    tools:showIn="@layout/activity_ingreso">
+
+    <LinearLayout
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/padding_left_app"
+        android:paddingEnd="@dimen/padding_right_app"
+        android:paddingTop="@dimen/padding_top_app"
+        android:paddingBottom="@dimen/padding_bot_app"
+        tools:context=".actividades.Ingreso"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv-ingresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_title_size"
+            android:textColor="@color/primaryTextDark"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:text="@string/si_name"/>
+
+        <EditText
+            android:id="@+id/et-usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/hint_usuario"
+            android:inputType="text"/>
+        <EditText
+            android:id="@id/et-contraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/hint_contra"
+            android:inputType="textPassword" />
+
+        <!--<Button
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="end"
+            android:background="@color/colorWhite"
+            android:textColor="@color/colorBlack"
+            android:text="@string/btn_recuperar_contra"
+            android:textSize="@dimen/btn_txt_size" />-->
+
+        <Button
+            android:id="@+id/btn-ingresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_ingresar"
+            android:layout_marginTop="40dp"
+            android:textSize="@dimen/btn_txt_size"
+            android:onClick="goHome"/>
+
+        <Button
+            android:id="@id/btn-registrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_registrar"
+            android:textSize="@dimen/btn_txt_size"
+            android:onClick="goRegistarse"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
