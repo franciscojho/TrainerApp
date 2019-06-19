@@ -9,9 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-
 import com.example.myapplication.R;
-import com.example.myapplication.actividades.adapters.RecyclerViewAdapter;
+import com.example.myapplication.actividades.adapters.AdaptadorClientes;
 import com.example.myapplication.entidades.persona.Cliente;
 
 import java.util.ArrayList;
@@ -43,19 +42,18 @@ public class ClienteActivity extends AppCompatActivity{
         initClients();
     }
 
-
     private void initClients(){
         Log.d(TAG, "initClients: preparando clientes");
         Cliente c1 = new Cliente("Francisco", "Huapaya", 940361504, "franciscojho@hotmail.com", 26,
-                1.78, 76, "Tener una vida sana", false, "@mipmap/ic_launcher");
+                1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
         Cliente c2 = new Cliente("Roberto", "Huapaya", 940361504, "franciscojho@hotmail.com", 25,
-                1.78, 76, "Tener una vida sana", false, "@mipmap/ic_launcher");
+                1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
         Cliente c3 = new Cliente("Rolando", "Huapaya", 940361504, "franciscojho@hotmail.com", 40,
-                1.78, 76, "Tener una vida sana", false, "@mipmap/ic_launcher");
+                1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
         Cliente c4 = new Cliente("Juan", "Huapaya", 940361504, "franciscojho@hotmail.com", 18,
-                1.78, 76, "Tener una vida sana", false, "ic_launcher");
+                1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
         Cliente c5 = new Cliente("Ricardo", "Huapaya", 940361504, "franciscojho@hotmail.com", 20,
-                1.78, 76, "Tener una vida sana", false, "@mipmap/ic_launcher");
+                1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
         
         arrayClients.add(c1);
         arrayClients.add(c2);
@@ -70,7 +68,7 @@ public class ClienteActivity extends AppCompatActivity{
     private void initRecyclerView(){
         Log.d(TAG, "initRecyclerView: iniciando recyclerview");
         RecyclerView recyclerView = findViewById(R.id.recycler_clients);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, arrayClients);
+        AdaptadorClientes adapter = new AdaptadorClientes(this, arrayClients);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

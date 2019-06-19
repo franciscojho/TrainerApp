@@ -18,13 +18,13 @@ import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
-    private static final String TAG = "RecyclerViewAdapter";
+public class AdaptadorClientes extends RecyclerView.Adapter<AdaptadorClientes.ViewHolder>{
+    private static final String TAG = "AdaptadorClientes";
 
     private ArrayList<Cliente> misClientes;
     private Context context;
 
-    public RecyclerViewAdapter(Context context, ArrayList<Cliente> misClientes) {
+    public AdaptadorClientes(Context context, ArrayList<Cliente> misClientes) {
         this.context = context;
         this.misClientes = misClientes;
     }
