@@ -1,6 +1,8 @@
 package com.example.myapplication.actividades.adapters;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +11,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.bumptech.glide.Glide;
 import com.example.myapplication.R;
 import com.example.myapplication.entidades.persona.Cliente;
 
@@ -42,10 +40,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int position) {
         Log.d(TAG, "onBindViewHolder: called.");
-        Glide.with(context)
-                .asBitmap()
-                .load(misClientes.get(position).getImage())
-                .into(viewHolder.clientImage);
+
+        viewHolder.clientImage.setImageResource(misClientes.get(position).getImage());
         viewHolder.clientName.setText(misClientes.get(position).getNombre());
         viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
