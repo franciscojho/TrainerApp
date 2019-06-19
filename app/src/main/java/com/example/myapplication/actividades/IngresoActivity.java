@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
-
 import com.example.myapplication.R;
 import com.example.myapplication.actividades.views.HomeActivity;
 import com.example.myapplication.actividades.views.RegistroActivity;

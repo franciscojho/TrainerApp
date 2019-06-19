@@ -5,7 +5,7 @@ public class Cliente extends Persona{
     private double peso;
     private String objetivo;
     private boolean doSports;
-    private String image;
+    private int image;
 
     public double getAltura() {
         return altura;
@@ -23,12 +23,12 @@ public class Cliente extends Persona{
         return doSports;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
     public Cliente(String nombre, String apellido, long celular, String correo, int edad,
-                   double altura, double peso, String objetivo, boolean doSports, String image) {
+                   double altura, double peso, String objetivo, boolean doSports, int image) {
         super(nombre, apellido, celular, correo, edad);
         this.altura = altura;
         this.peso = peso;
