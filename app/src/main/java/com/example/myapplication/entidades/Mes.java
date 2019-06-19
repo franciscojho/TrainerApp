@@ -1,6 +1,8 @@
 package com.example.myapplication.entidades;
 
-public class Mes implements Repetible {
+import com.example.myapplication.entidades.persona.Cliente;
+
+public class Mes implements Mostrable {
     private String nombre;
     private int cantDias;
     private double precio;

@@ -2,10 +2,12 @@
     <string name="app_name">Al Tanto Entrenado</string>
     <string name="su_name">REGISTRAR</string>
     <string name="si_name">INGRESAR</string>
+    <string name="nc_name">Nuevo Cliente</string>
 
     <string name="btn_registrar">Registrar</string>
     <string name="btn_ingresar">Ingresar</string>
     <string name="btn_recuperar_contra">¿Olvidaste?</string>
+    <string name="btn_agregar">Agregar</string>
 
     <string name="hint_usuario">Usuario</string>
     <string name="hint_nombre">Nombres</string>
@@ -20,5 +22,13 @@
     <string name="title_activity_test_two">TestTwoActivity</string>
     <string name="title_activity_ingreso">IngresoActivity</string>
     <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_cliente">ClienteActivity</string>
+    <string name="title_activity_dias">DiasActivity</string>
+    <string name="title_activity_nuevo_cliente">NuevoClienteActivity</string>
+    <string name="hint_peso">Peso</string>
+    <string name="hint_talla">Talla</string>
+    <string name="hint_obj">Objectivo/Descripción</string>
+    <string name="chb_esDeportista">¿Realiza algún deporte?</string>
+
 
 </resources>

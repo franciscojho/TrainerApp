@@ -10,9 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".actividades.views.NuevoClienteActivity"
+            android:label="@string/title_activity_nuevo_cliente"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".actividades.views.DiasActivity"
+            android:label="@string/title_activity_dias"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".actividades.views.ClienteActivity"
+            android:label="@string/title_activity_cliente"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".actividades.views.HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".actividades.IngresoActivity"
             android:label="@string/title_activity_ingreso"

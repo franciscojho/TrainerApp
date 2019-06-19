@@ -1,6 +1,9 @@
 package com.example.myapplication.entidades;
 
-public class Cita implements Repetible {
+import com.example.myapplication.entidades.persona.Cliente;
+import com.example.myapplication.entidades.persona.Entrenador;
+
+public class Cita implements Mostrable {
 
     private Cliente cliente;
     private Entrenador entrenador;
@@ -30,8 +33,8 @@ public class Cita implements Repetible {
     @Override
     public String MostrarInfo() {
         return "Detalle de la cita: "+"\n"+
-                "Nombre del cliente: "+cliente.nombre+"\n"+
-                "Nombre del entrenador: "+entrenador.nombre+"\n"+
+                "Nombre del cliente: "+cliente.getNombre()+"\n"+
+                "Nombre del entrenador: "+entrenador.getNombre()+"\n"+
                 "Direccion: "+direccion+"\n"+
                 "Rutina: "+rutinaDia.nombre+"\n"+
                 "Fecha y hora:"+fechaHora+"\n"+

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".actividades.views.NuevoClienteActivity"
+    tools:showIn="@layout/activity_nuevo_cliente">
+
+    <LinearLayout
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/padding_left_app"
+        android:paddingEnd="@dimen/padding_right_app"
+        android:paddingTop="@dimen/padding_top_app"
+        android:paddingBottom="@dimen/padding_bot_app"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv-nuevoCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/primaryTextDark"
+            android:textSize="@dimen/text_title_size"
+            android:textStyle="bold"
+            android:text="@string/nc_name" />
+
+        <EditText
+            android:id="@+id/et-clienteNom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/hint_nombre"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/et-clienteApe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/hint_apellido"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/et-clienteNac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de Nacimiento"
+            android:inputType="date"/>
+
+        <EditText
+            android:id="@+id/et-clienteCel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/hint_cel"
+            android:inputType="phone"
+            android:digits="0123456789"/>
+
+        <EditText
+            android:id="@+id/et-clienteEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/et-clientePeso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/hint_peso"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/et-clienteTalla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/hint_talla"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/et-clienteObj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/hint_obj"
+            android:inputType="textShortMessage"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chb_esDeportista"/>
+
+        <Button
+            android:id="@+id/btn-registrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:text="@string/btn_agregar"
+            android:textSize="@dimen/btn_txt_size" />
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

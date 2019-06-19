@@ -1,5 +1,6 @@
 package com.example.myapplication.actividades.views;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -22,10 +23,25 @@ public class HomeActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+
+                startActivity(new Intent(HomeActivity.this, NuevoClienteActivity.class));
+
+                Snackbar.make(view, "Nuevo cliente agregado", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
             }
         });
     }
+
+    public void goDias(View v){
+        Intent intentDias = new Intent(this, DiasActivity.class);
+        startActivity(intentDias);
+    }
+
+    public void goClientes(View v){
+        Intent intentCl = new Intent(this, ClienteActivity.class);
+        startActivity(intentCl);
+    }
+
 
 }

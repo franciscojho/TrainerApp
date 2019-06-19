@@ -1,6 +1,8 @@
 package com.example.myapplication.entidades;
 
-public class Ejercicio implements Repetible {
+import com.example.myapplication.entidades.persona.Cliente;
+
+public class Ejercicio implements Mostrable {
     public String nombre;
     private int numeroSets;
     private int repeticiones;

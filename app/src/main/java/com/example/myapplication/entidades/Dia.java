@@ -1,6 +1,6 @@
 package com.example.myapplication.entidades;
 
-public class Dia implements  Repetible{
+public class Dia implements  Mostrable{
     private String nombre;
     private RutinaDia rutinaDia;
 

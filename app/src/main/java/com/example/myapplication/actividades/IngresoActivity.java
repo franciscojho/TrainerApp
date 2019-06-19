@@ -11,6 +11,7 @@ import com.example.myapplication.R;
 import com.example.myapplication.actividades.views.HomeActivity;
 import com.example.myapplication.actividades.views.RegistroActivity;
 
+
 public class IngresoActivity extends AppCompatActivity {
 
     @Override
@@ -19,6 +20,7 @@ public class IngresoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ingreso);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         EditText etUsuario = findViewById(R.id.et_usuario);
         EditText etContra = findViewById(R.id.et_contraseña);
