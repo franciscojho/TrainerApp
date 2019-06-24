@@ -1,5 +1,6 @@
 package com.example.myapplication.actividades.views;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,13 +10,15 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
+
 import com.example.myapplication.R;
 import com.example.myapplication.actividades.adapters.AdaptadorClientes;
 import com.example.myapplication.entidades.persona.Cliente;
 
 import java.util.ArrayList;
 
-public class ClienteActivity extends AppCompatActivity{
+public class ListaClienteActivity extends AppCompatActivity{
 
     private static final String TAG = "ClientActivity";
     ArrayList<Cliente> arrayClients = new ArrayList<>();
@@ -34,6 +37,7 @@ public class ClienteActivity extends AppCompatActivity{
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(ListaClienteActivity.this, RegistroNuevoClienteActivity.class));
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
@@ -67,9 +71,10 @@ public class ClienteActivity extends AppCompatActivity{
     
     private void initRecyclerView(){
         Log.d(TAG, "initRecyclerView: iniciando recyclerview");
-        RecyclerView recyclerView = findViewById(R.id.recycler_clients);
+        final RecyclerView recyclerView = findViewById(R.id.recycler_clients);
         AdaptadorClientes adapter = new AdaptadorClientes(this, arrayClients);
         recyclerView.setAdapter(adapter);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 

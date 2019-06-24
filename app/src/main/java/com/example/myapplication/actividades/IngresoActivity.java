@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import com.example.myapplication.R;
 import com.example.myapplication.actividades.views.HomeActivity;
-import com.example.myapplication.actividades.views.RegistroActivity;
+import com.example.myapplication.actividades.views.RegistroUsuarioActivity;
 
 
 public class IngresoActivity extends AppCompatActivity {
@@ -27,7 +27,7 @@ public class IngresoActivity extends AppCompatActivity {
     }
 
     public void goRegistarse(View v){
-        Intent intentRe = new Intent(this, RegistroActivity.class);
+        Intent intentRe = new Intent(this, RegistroUsuarioActivity.class);
         startActivity(intentRe);
     }
 

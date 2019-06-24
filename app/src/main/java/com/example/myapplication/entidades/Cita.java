@@ -1,43 +1,83 @@
 package com.example.myapplication.entidades;
 
-import com.example.myapplication.entidades.persona.Cliente;
-import com.example.myapplication.entidades.persona.Entrenador;
-
 public class Cita implements Mostrable {
 
-    private Cliente cliente;
-    private Entrenador entrenador;
-    private String direccion;
-    private RutinaDia rutinaDia;
-    private String fechaHora;
-    private boolean faltoClase;
+    private String address;
+    private int day, month, year, hour, minutes, seconds;
+    private String trainingType;
 
-    public Cita(Cliente cliente, Entrenador entrenador, String direccion, RutinaDia rutinaDia, String fechaHora, boolean faltoClase) {
-        this.cliente = cliente;
-        this.entrenador = entrenador;
-        this.direccion = direccion;
-        this.rutinaDia = rutinaDia;
-        this.fechaHora = fechaHora;
-        this.faltoClase = faltoClase;
+    public String getAddress() {
+        return address;
     }
 
-    private String falta()
-    {
-        String msg = "";
-        if(faltoClase=true) msg="No falto a la cita";
-        else msg = "Falto a la cita";
-        return msg;
-
+    public void setAddress(String address) {
+        this.address = address;
     }
+
+    public int getDay(int dayOfMonth) {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public int getMonth(int month) {
+        return this.month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getYear(int year) {
+        return this.year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getHour() {
+        return hour;
+    }
+
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
+    public int getMinutes() {
+        return minutes;
+    }
+
+    public void setMinutes(int minutes) {
+        this.minutes = minutes;
+    }
+
+    public int getSeconds() {
+        return seconds;
+    }
+
+    public void setSeconds(int seconds) {
+        this.seconds = seconds;
+    }
+
+    public String getTrainingType() {
+        return trainingType;
+    }
+
+    public void setTrainingType(String trainingType) {
+        this.trainingType = trainingType;
+    }
+
+
 
     @Override
     public String MostrarInfo() {
-        return "Detalle de la cita: "+"\n"+
-                "Nombre del cliente: "+cliente.getNombre()+"\n"+
-                "Nombre del entrenador: "+entrenador.getNombre()+"\n"+
-                "Direccion: "+direccion+"\n"+
-                "Rutina: "+rutinaDia.nombre+"\n"+
-                "Fecha y hora:"+fechaHora+"\n"+
-                "Falto a clase: "+falta();
+        return ""; /*"Detalle de la cita: "+"\n"+
+                "Direccion: "+address+"\n"+
+                "Fecha: "+date+"\n"+
+                "Hora:"+time+"\n"+
+                "Falto a clase: "+falta();*/
     }
 }

@@ -29,6 +29,8 @@
     <string name="hint_talla">Talla</string>
     <string name="hint_obj">Objectivo/Descripción</string>
     <string name="chb_esDeportista">¿Realiza algún deporte?</string>
+    <string name="title_activity_cita">CitaActivity</string>
+    <string name="title_activity_perfil_cliente">PerfilClienteActivity</string>
 
 
 </resources>

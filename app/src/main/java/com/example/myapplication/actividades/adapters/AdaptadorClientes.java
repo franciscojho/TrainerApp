@@ -1,17 +1,19 @@
 package com.example.myapplication.actividades.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.myapplication.R;
+import com.example.myapplication.actividades.views.PerfilClienteActivity;
 import com.example.myapplication.entidades.persona.Cliente;
 
 import java.util.ArrayList;
@@ -24,6 +26,10 @@ public class AdaptadorClientes extends RecyclerView.Adapter<AdaptadorClientes.Vi
     private ArrayList<Cliente> misClientes;
     private Context context;
 
+    public Context getContext() {
+        return context;
+    }
+
     public AdaptadorClientes(Context context, ArrayList<Cliente> misClientes) {
         this.context = context;
         this.misClientes = misClientes;
@@ -33,23 +39,17 @@ public class AdaptadorClientes extends RecyclerView.Adapter<AdaptadorClientes.Vi
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int position) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_listitem, viewGroup, false);
-        ViewHolder holder = new ViewHolder(view);
-        return holder;
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int position) {
         Log.d(TAG, "onBindViewHolder: called.");
 
-        viewHolder.clientImage.setImageResource(misClientes.get(position).getImage());
+        viewHolder.clientImage.setImageResource(misClientes.get(position).getcImage());
         viewHolder.clientName.setText(misClientes.get(position).getNombre());
-        viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "onClick: Ingresando al perfil del cleinte "+misClientes.get(position).getNombre());
-                Toast.makeText(context, misClientes.get(position).getNombre(), Toast.LENGTH_SHORT).show();
-            }
-        });
+        viewHolder.setOnClickListeners();
+        
     }
 
     @Override
@@ -57,17 +57,39 @@ public class AdaptadorClientes extends RecyclerView.Adapter<AdaptadorClientes.Vi
         return misClientes.size();
     }
 
-
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         CircleImageView clientImage;
         TextView clientName;
         RelativeLayout parentLayout;
+        Button btnClientProfile;
+        Context vContext;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
+
+            vContext = itemView.getContext();
             clientImage = itemView.findViewById(R.id.client_image);
             clientName = itemView.findViewById(R.id.client_name);
             parentLayout = itemView.findViewById(R.id.parent_layout);
+            btnClientProfile = itemView.findViewById(R.id.btnPerfilCli);
+
         }
+
+        void setOnClickListeners() {
+            btnClientProfile.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            if (v.getId() == R.id.btnPerfilCli) {
+                Intent intent = new Intent(vContext, PerfilClienteActivity.class);
+                intent.putExtra("clientImage", R.drawable.defaultimage);
+                intent.putExtra("clientName", clientName.getText());
+                vContext.startActivity(intent);
+
+            }
+        }
+
+
     }
 }

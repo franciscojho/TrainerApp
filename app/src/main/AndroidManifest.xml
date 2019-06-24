@@ -10,15 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".actividades.views.NuevoClienteActivity"
+            android:name=".actividades.views.PerfilClienteActivity"
+            android:label="@string/title_activity_perfil_cliente"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".actividades.views.CitaActivity"
+            android:label="@string/title_activity_cita"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".actividades.views.RegistroNuevoClienteActivity"
             android:label="@string/title_activity_nuevo_cliente"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".actividades.views.DiasActivity"
             android:label="@string/title_activity_dias"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".actividades.views.ClienteActivity"
+            android:name=".actividades.views.ListaClienteActivity"
             android:label="@string/title_activity_cliente"
             android:theme="@style/AppTheme" />
         <activity
@@ -36,7 +44,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".actividades.views.RegistroActivity"
+            android:name=".actividades.views.RegistroUsuarioActivity"
             android:label="@string/title_activity_test_two"
             android:theme="@style/AppTheme" />
     </application>

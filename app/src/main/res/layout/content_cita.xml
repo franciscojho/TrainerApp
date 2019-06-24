@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/padding_left_app"
+    android:paddingEnd="@dimen/padding_right_app"
+    android:paddingTop="@dimen/padding_top_app"
+    android:paddingBottom="@dimen/padding_bot_app"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".actividades.views.CitaActivity"
+    tools:showIn="@layout/activity_cita"
+    android:orientation="vertical">
+
+
+
+        <EditText
+            android:id="@+id/etDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Fecha"
+            android:clickable="true"
+            android:focusable="false"
+            android:inputType="date"/>
+
+        <EditText
+            android:id="@+id/etTimePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hora"
+            android:clickable="true"
+            android:focusable="false"
+            android:inputType="time"/>
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_below="@+id/btnTimePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Dirección"/>
+
+        <EditText
+            android:id="@+id/etTypeTraining"
+            android:layout_below="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Tipo de entrenamiento"/>
+
+        <Button
+            android:id="@+id/btnAddCita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar"/>
+
+</LinearLayout>

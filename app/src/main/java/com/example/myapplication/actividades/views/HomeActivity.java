@@ -24,7 +24,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                startActivity(new Intent(HomeActivity.this, NuevoClienteActivity.class));
+                startActivity(new Intent(HomeActivity.this, RegistroNuevoClienteActivity.class));
 
                 Snackbar.make(view, "Nuevo cliente agregado", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
@@ -39,7 +39,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void goClientes(View v){
-        Intent intentCl = new Intent(this, ClienteActivity.class);
+        Intent intentCl = new Intent(this, ListaClienteActivity.class);
         startActivity(intentCl);
     }
 

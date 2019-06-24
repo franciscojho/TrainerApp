@@ -1,45 +1,44 @@
 package com.example.myapplication.entidades.persona;
 
+import com.example.myapplication.entidades.MyDatePicker;
+
+import java.time.LocalDate;
+
 public class Cliente extends Persona{
-    private double altura;
-    private double peso;
-    private String objetivo;
+    private double cSize;
+    private double cWeight;
+    private String cObjetive;
     private boolean doSports;
-    private int image;
+    private int cImage;
 
-    public double getAltura() {
-        return altura;
+    public double getcSize() {
+        return cSize;
     }
 
-    public double getPeso() {
-        return peso;
+    public double getcWeight() {
+        return cWeight;
     }
 
-    public String getObjetivo() {
-        return objetivo;
+    public String getcObjetive() {
+        return cObjetive;
     }
 
     public boolean isDoSports() {
         return doSports;
     }
 
-    public int getImage() {
-        return image;
+    public int getcImage() {
+        return cImage;
     }
 
-    public Cliente(String nombre, String apellido, long celular, String correo, int edad,
-                   double altura, double peso, String objetivo, boolean doSports, int image) {
+    public Cliente(String nombre, String apellido, long celular, String correo, int edad, double cSize,
+                   double cWeight, String cObjetive, boolean doSports, int cImage) {
         super(nombre, apellido, celular, correo, edad);
-        this.altura = altura;
-        this.peso = peso;
-        this.objetivo = objetivo;
+        this.cSize = cSize;
+        this.cWeight = cWeight;
+        this.cObjetive = cObjetive;
         this.doSports = doSports;
-        this.image = image;
-    }
-
-    private double CalcularIMC()
-    {
-        return peso/(altura*altura);
+        this.cImage = cImage;
     }
 
     private String doSports()
@@ -48,12 +47,13 @@ public class Cliente extends Persona{
         else return "Es sedentario";
     }
 
+
     @Override
     public String MostrarInfo() {
         return super.MostrarInfo()+"\n"+
-                "Altura: "+altura+"\n"+
-                "Peso: " +peso+"\n"+
-                "Objetivo: "+objetivo+"\n"+
+                "Altura: "+ cSize +"\n"+
+                "Peso: " +cWeight+"\n"+
+                "Objetivo: "+ cObjetive +"\n"+
                 "¿Realiza algún deporte?: "+doSports();
     }
 

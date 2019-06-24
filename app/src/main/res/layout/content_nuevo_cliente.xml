@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".actividades.views.NuevoClienteActivity"
+    tools:context=".actividades.views.RegistroNuevoClienteActivity"
     tools:showIn="@layout/activity_nuevo_cliente">
 
     <LinearLayout
@@ -29,7 +29,7 @@
             android:text="@string/nc_name" />
 
         <EditText
-            android:id="@+id/et-clienteNom"
+            android:id="@+id/etClientName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -37,7 +37,7 @@
             android:inputType="textPersonName"/>
 
         <EditText
-            android:id="@+id/et-clienteApe"
+            android:id="@+id/etClientLName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -45,14 +45,16 @@
             android:inputType="textPersonName"/>
 
         <EditText
-            android:id="@+id/et-clienteNac"
+            android:id="@+id/etClientAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Fecha de Nacimiento"
-            android:inputType="date"/>
+            android:clickable="true"
+            android:inputType="date"
+            android:focusable="false" />
 
         <EditText
-            android:id="@+id/et-clienteCel"
+            android:id="@+id/etClientCell"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -61,7 +63,7 @@
             android:digits="0123456789"/>
 
         <EditText
-            android:id="@+id/et-clienteEmail"
+            android:id="@+id/etClientEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -69,7 +71,7 @@
             android:inputType="textEmailAddress"/>
 
         <EditText
-            android:id="@+id/et-clientePeso"
+            android:id="@+id/etClientWght"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -77,7 +79,7 @@
             android:inputType="numberDecimal"/>
 
         <EditText
-            android:id="@+id/et-clienteTalla"
+            android:id="@+id/etClientSize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -85,7 +87,7 @@
             android:inputType="numberDecimal"/>
 
         <EditText
-            android:id="@+id/et-clienteObj"
+            android:id="@+id/etClientObj"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -93,6 +95,7 @@
             android:inputType="textShortMessage"/>
 
         <CheckBox
+            android:id="@+id/cbClientDoSprt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/chb_esDeportista"/>

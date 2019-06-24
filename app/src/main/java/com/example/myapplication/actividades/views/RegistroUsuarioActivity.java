@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 import com.example.myapplication.R;
 
-public class RegistroActivity extends AppCompatActivity {
+public class RegistroUsuarioActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
