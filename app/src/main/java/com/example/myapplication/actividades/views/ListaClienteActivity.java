@@ -48,15 +48,15 @@ public class ListaClienteActivity extends AppCompatActivity{
 
     private void initClients(){
         Log.d(TAG, "initClients: preparando clientes");
-        Cliente c1 = new Cliente("Francisco", "Huapaya", 940361504, "franciscojho@hotmail.com", 26,
+        Cliente c1 = new Cliente("Francisco", "Huapaya", 940361504, "franciscojho@hotmail.com", "26",
                 1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
-        Cliente c2 = new Cliente("Roberto", "Huapaya", 940361504, "franciscojho@hotmail.com", 25,
+        Cliente c2 = new Cliente("Roberto", "Huapaya", 940361504, "franciscojho@hotmail.com", "25",
                 1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
-        Cliente c3 = new Cliente("Rolando", "Huapaya", 940361504, "franciscojho@hotmail.com", 40,
+        Cliente c3 = new Cliente("Rolando", "Huapaya", 940361504, "franciscojho@hotmail.com", "40",
                 1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
-        Cliente c4 = new Cliente("Juan", "Huapaya", 940361504, "franciscojho@hotmail.com", 18,
+        Cliente c4 = new Cliente("Juan", "Huapaya", 940361504, "franciscojho@hotmail.com", "18",
                 1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
-        Cliente c5 = new Cliente("Ricardo", "Huapaya", 940361504, "franciscojho@hotmail.com", 20,
+        Cliente c5 = new Cliente("Ricardo", "Huapaya", 940361504, "franciscojho@hotmail.com", "20",
                 1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
         
         arrayClients.add(c1);

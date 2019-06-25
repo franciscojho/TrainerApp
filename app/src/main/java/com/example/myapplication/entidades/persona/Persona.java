@@ -7,7 +7,7 @@ public abstract class Persona implements Mostrable {
     private String apellido;
     private long celular;
     private String correo;
-    private int edad;
+    private String  fecNac;
 
     public String getNombre() {
 
@@ -26,16 +26,16 @@ public abstract class Persona implements Mostrable {
         return correo;
     }
 
-    public int getEdad() {
-        return edad;
+    public String getFecNac() {
+        return fecNac;
     }
 
-    public Persona(String nombre, String apellido, long celular, String correo, int edad) {
+    public Persona(String nombre, String apellido, long celular, String correo, String fecNac) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.celular = celular;
         this.correo = correo;
-        this.edad = edad;
+        this.fecNac = fecNac;
     }
 
     @Override
@@ -44,7 +44,7 @@ public abstract class Persona implements Mostrable {
                 "Apellido: "+apellido+"\n"+
                 "Celular: "+celular+"\n"+
                 "Correo: "+correo+"\n"+
-                "Edad: "+edad+"\n";
+                "Edad: "+ fecNac +"\n";
     }
 
 }

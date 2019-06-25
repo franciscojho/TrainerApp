@@ -31,9 +31,9 @@ public class Cliente extends Persona{
         return cImage;
     }
 
-    public Cliente(String nombre, String apellido, long celular, String correo, int edad, double cSize,
+    public Cliente(String nombre, String apellido, long celular, String correo, String fecNac, double cSize,
                    double cWeight, String cObjetive, boolean doSports, int cImage) {
-        super(nombre, apellido, celular, correo, edad);
+        super(nombre, apellido, celular, correo, fecNac);
         this.cSize = cSize;
         this.cWeight = cWeight;
         this.cObjetive = cObjetive;
