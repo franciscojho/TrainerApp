@@ -13,6 +13,15 @@ public class MyTimePicker implements View.OnClickListener, TimePickerDialog.OnTi
     private int nHours, nMinutes;
     private EditText nEditText;
     private Context nContext;
+    private String date;
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public int getnHours() {
         return nHours;
@@ -43,14 +52,38 @@ public class MyTimePicker implements View.OnClickListener, TimePickerDialog.OnTi
 
     @Override
     public void onTimeSet(android.widget.TimePicker view, int hourOfDay, int minute) {
-        if (hourOfDay<10 && minute<10)
-           nEditText.setText("0"+hourOfDay+":0"+minute);
-        else if (hourOfDay>9 && minute>9)
+        if (hourOfDay<10 && minute<10){
+            nEditText.setText("0"+hourOfDay+":0"+minute);
+            date = "0"+hourOfDay+":0"+minute;
+        } else if (hourOfDay>9 && minute>9){
             nEditText.setText(hourOfDay+":0"+minute);
-        else if (hourOfDay<10 && minute >9)
+            date = hourOfDay+":0"+minute;
+        } else if (hourOfDay<10 && minute >9){
             nEditText.setText("0"+hourOfDay+":"+minute);
-        else if (hourOfDay>9 && minute<10)
+            date = "0"+hourOfDay+":"+minute;
+        } else if (hourOfDay>9 && minute<10){
             nEditText.setText(hourOfDay+":"+minute);
+            date = hourOfDay+":"+minute;
+        }
+    }
+
+    public String BuildTime(){
+        if (nHours<10 && nMinutes<10){
+            date = "0"+nHours+":0"+nMinutes;
+            return date;
+        } else if (nHours>9 && nMinutes>9){
+            date = nHours+":0"+nMinutes;
+            return date;
+        } else if (nHours<10 && nMinutes >9){
+            date = "0"+nHours+":"+nMinutes;
+            return date;
+        } else if (nHours>9 && nMinutes<10){
+            date = nHours+":"+nMinutes;
+            return date;
+        }else {
+            date = "No hay cita programada";
+            return date;
+        }
     }
 
     @Override

@@ -13,7 +13,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.actividades.views.CitaActivity;
 import com.example.myapplication.actividades.views.PerfilClienteActivity;
+import com.example.myapplication.entidades.MyTimePicker;
 import com.example.myapplication.entidades.persona.Cliente;
 
 import java.util.ArrayList;
@@ -48,8 +50,11 @@ public class AdaptadorClientes extends RecyclerView.Adapter<AdaptadorClientes.Vi
 
         viewHolder.clientImage.setImageResource(misClientes.get(position).getcImage());
         viewHolder.clientName.setText(misClientes.get(position).getNombre());
+        //viewHolder.clientAge.setText(misClientes.get(position).getEdad());
+        viewHolder.clientObj.setText(misClientes.get(position).getcObjetive());
+        viewHolder.clientLname.setText(misClientes.get(position).getApellido());
+
         viewHolder.setOnClickListeners();
-        
     }
 
     @Override
@@ -59,9 +64,9 @@ public class AdaptadorClientes extends RecyclerView.Adapter<AdaptadorClientes.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         CircleImageView clientImage;
-        TextView clientName;
+        TextView clientName, clientLname, clientObj, clientDate;
         RelativeLayout parentLayout;
-        Button btnClientProfile;
+        Button btnClientProfile, btnClientDate;
         Context vContext;
 
         ViewHolder(View itemView) {
@@ -70,13 +75,18 @@ public class AdaptadorClientes extends RecyclerView.Adapter<AdaptadorClientes.Vi
             vContext = itemView.getContext();
             clientImage = itemView.findViewById(R.id.client_image);
             clientName = itemView.findViewById(R.id.client_name);
+            clientLname = itemView.findViewById(R.id.client_Lname);
+            clientObj = itemView.findViewById(R.id.client_obj);
+            clientDate = itemView.findViewById(R.id.client_date);
             parentLayout = itemView.findViewById(R.id.parent_layout);
             btnClientProfile = itemView.findViewById(R.id.btnPerfilCli);
+            btnClientDate = itemView.findViewById(R.id.btnCitasCli);
 
         }
 
         void setOnClickListeners() {
             btnClientProfile.setOnClickListener(this);
+            btnClientDate.setOnClickListener(this);
         }
 
         @Override
@@ -85,11 +95,16 @@ public class AdaptadorClientes extends RecyclerView.Adapter<AdaptadorClientes.Vi
                 Intent intent = new Intent(vContext, PerfilClienteActivity.class);
                 intent.putExtra("clientImage", R.drawable.defaultimage);
                 intent.putExtra("clientName", clientName.getText());
+                intent.putExtra("clientObj", clientObj.getText());
+                intent.putExtra("clientLname", clientLname.getText());
                 vContext.startActivity(intent);
 
+
+            }else if (v.getId() == R.id.btnCitasCli){
+                Intent intent2 = new Intent(vContext, CitaActivity.class);
+                vContext.startActivity(intent2);
             }
         }
-
 
     }
 }

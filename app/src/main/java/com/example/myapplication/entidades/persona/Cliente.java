@@ -2,8 +2,6 @@ package com.example.myapplication.entidades.persona;
 
 import com.example.myapplication.entidades.MyDatePicker;
 
-import java.time.LocalDate;
-
 public class Cliente extends Persona{
     private double cSize;
     private double cWeight;
@@ -23,17 +21,17 @@ public class Cliente extends Persona{
         return cObjetive;
     }
 
-    public boolean isDoSports() {
-        return doSports;
+    public String isDoSports() {
+        return doSports();
     }
 
     public int getcImage() {
         return cImage;
     }
 
-    public Cliente(String nombre, String apellido, long celular, String correo, String fecNac, double cSize,
+    public Cliente(String nombre, String apellido, long celular, String correo, int edad, double cSize,
                    double cWeight, String cObjetive, boolean doSports, int cImage) {
-        super(nombre, apellido, celular, correo, fecNac);
+        super(nombre, apellido, celular, correo, edad);
         this.cSize = cSize;
         this.cWeight = cWeight;
         this.cObjetive = cObjetive;
@@ -46,7 +44,6 @@ public class Cliente extends Persona{
         if(doSports) return "Es una persona activa";
         else return "Es sedentario";
     }
-
 
     @Override
     public String MostrarInfo() {

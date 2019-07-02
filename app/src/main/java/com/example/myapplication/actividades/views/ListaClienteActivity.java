@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.myapplication.R;
 import com.example.myapplication.actividades.adapters.AdaptadorClientes;
+import com.example.myapplication.entidades.MyDatePicker;
 import com.example.myapplication.entidades.persona.Cliente;
 
 import java.util.ArrayList;
@@ -21,8 +22,8 @@ import java.util.ArrayList;
 public class ListaClienteActivity extends AppCompatActivity{
 
     private static final String TAG = "ClientActivity";
-    ArrayList<Cliente> arrayClients = new ArrayList<>();
 
+    ArrayList<Cliente> arrayClients = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,23 +49,28 @@ public class ListaClienteActivity extends AppCompatActivity{
 
     private void initClients(){
         Log.d(TAG, "initClients: preparando clientes");
-        Cliente c1 = new Cliente("Francisco", "Huapaya", 940361504, "franciscojho@hotmail.com", "26",
-                1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
-        Cliente c2 = new Cliente("Roberto", "Huapaya", 940361504, "franciscojho@hotmail.com", "25",
-                1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
-        Cliente c3 = new Cliente("Rolando", "Huapaya", 940361504, "franciscojho@hotmail.com", "40",
-                1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
-        Cliente c4 = new Cliente("Juan", "Huapaya", 940361504, "franciscojho@hotmail.com", "18",
-                1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
-        Cliente c5 = new Cliente("Ricardo", "Huapaya", 940361504, "franciscojho@hotmail.com", "20",
-                1.78, 76, "Tener una vida sana", false, R.drawable.defaultimage);
-        
+        Cliente c1 = new Cliente("Lee", "Sin", 940361884, "lsin@hotmail.com", 20,
+                1.80, 80, "Tener una vida sana", false, R.drawable.defaultimage);
+        Cliente c2 = new Cliente("Roberto", "Triste", 940361504, "rtriste@hotmail.com", 23,
+                1.78, 75, "Bajar de peso", false, R.drawable.defaultimage);
+        Cliente c3 = new Cliente("Rolando", "Castro", 940361504, "rcastro@hotmail.com", 24,
+                1.74, 70, "Vivir feliz", false, R.drawable.defaultimage);
+        Cliente c4 = new Cliente("Felipe", "Vivaz", 930883504, "fvivas@hotmail.com", 18,
+                1.67, 59, "Aumentar masa muscular", false, R.drawable.defaultimage);
+        Cliente c5 = new Cliente("Yasuo", "Manco", 934504555, "myasuo@hotmail.com", 33,
+                1.70, 69, "Correr más rápido", false, R.drawable.defaultimage);
+        Cliente c6 = new Cliente("Miranda", "Miroquesada", 900233994, "mmiroque@hotmail.com", 22,
+                1.70, 69, "Bajar de peso", false, R.drawable.defaultimage);
+        Cliente c7 = new Cliente("Julia", "Maravilla", 913004050, "mjulia@hotmail.com", 25,
+                1.70, 69, "Ser más ágil", false, R.drawable.defaultimage);
+
         arrayClients.add(c1);
         arrayClients.add(c2);
         arrayClients.add(c3);
         arrayClients.add(c4);
         arrayClients.add(c5);
-
+        arrayClients.add(c6);
+        arrayClients.add(c7);
         initRecyclerView();
 
     }

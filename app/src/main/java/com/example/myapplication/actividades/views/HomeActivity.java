@@ -43,5 +43,10 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intentCl);
     }
 
+    public void goPerfilUsuario(View v){
+        Intent intentPU = new Intent(this, PerfilUsuarioActivity.class);
+        startActivity(intentPU);
+    }
+
 
 }

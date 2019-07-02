@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
+import com.example.myapplication.actividades.IngresoActivity;
+import com.example.myapplication.entidades.MyDatePicker;
+import com.example.myapplication.entidades.MyTimePicker;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,7 +25,13 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     Button registar;
     ProgressDialog progresd;
-    EditText etNom, etApe, etNac, etCel, etEmail, etContra;
+    EditText etNom, etApe, etCel, etEmail, etContra;
+    MyDatePicker etNac;
+
+    int fecNac;
+
+    public RegistroUsuarioActivity() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +47,7 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
 
         etNom = findViewById(R.id.et_nombres);
         etApe = findViewById(R.id.et_apellidos);
-        etNac = findViewById(R.id.et_nacimiento);
+        etNac = new MyDatePicker(this, R.id.et_nacimiento);
         etCel = findViewById(R.id.et_celular);
         etEmail = findViewById(R.id.et_email);
         etContra = findViewById(R.id.et_contraseña);
@@ -48,7 +57,7 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final String nombre = etNom.getText().toString();
                 final String apellido = etApe.getText().toString();
-                final String fecnacimiento = etNac.getText().toString();
+                fecNac = etNac.getAge();
                 final String celular = etCel.getText().toString();
                 final String email = etEmail.getText().toString();
                 final String contra = etContra.getText().toString();
@@ -76,6 +85,7 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             progresd.hide();
                             Toast.makeText(RegistroUsuarioActivity.this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
+                            //startActivity(new Intent(RegistroUsuarioActivity.this, IngresoActivity.class));
                         } else {
                             progresd.hide();
                             Toast.makeText(RegistroUsuarioActivity.this, "No se pudo registrar", Toast.LENGTH_SHORT).show();
@@ -85,11 +95,5 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
 
 
     }
-
-
-    /*public void goHome(View v){
-        Intent intentHome = new Intent(this, HomeActivity.class);
-        startActivity(intentHome);
-    }*/
 
 }

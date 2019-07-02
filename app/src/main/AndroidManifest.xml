@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".actividades.views.PerfilUsuarioActivity"
+            android:label="@string/title_activity_perfil_usuario"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".actividades.views.PerfilClienteActivity"
             android:label="@string/title_activity_perfil_cliente"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".actividades.views.CitaActivity"
             android:label="@string/title_activity_cita"

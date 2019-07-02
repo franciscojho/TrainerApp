@@ -18,34 +18,75 @@
         android:id="@+id/client_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Francisco"
+        android:text="Roberto"
         android:layout_toEndOf="@+id/client_image"
         android:textColor="@color/primaryTextDark"
-        android:layout_centerVertical="true"
         android:layout_marginLeft="20dp"
         android:textSize="17sp"/>
 
-    <LinearLayout
-        android:layout_centerVertical="true"
-        android:id="@+id/linearParent"
+    <TextView
+        android:id="@+id/client_Lname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quesadilla"
         android:layout_toEndOf="@+id/client_name"
+        android:textColor="@color/primaryTextDark"
+        android:layout_marginLeft="10dp"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/client_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/client_image"
+        android:layout_below="@+id/client_name"
+        android:textColor="@color/primaryTextDark"
+        android:textSize="17sp"
+        android:layout_marginLeft="20dp"
+        android:text="Sedentario"/>
+    <TextView
+        android:id="@+id/client_obj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/client_image"
+        android:layout_below="@+id/client_state"
+        android:textColor="@color/primaryTextDark"
+        android:textSize="17sp"
+        android:layout_marginLeft="20dp"
+        android:text="BAJAR DE PESO"/>
+    <TextView
+        android:id="@+id/client_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/client_image"
+        android:layout_below="@+id/client_obj"
+        android:textColor="@color/primaryTextDark"
+        android:textSize="17sp"
+        android:layout_marginLeft="20dp"
+        android:text="18:20pm"/>
+
+    <LinearLayout
+        android:id="@+id/linearParent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/client_name"
+        android:gravity="end"
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnRutinasCli"
+            android:id="@+id/btnCitasCli"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rutinas"
-            android:layout_gravity="end"/>
+            android:layout_gravity="end"
+            android:text="Cita" />
 
         <Button
             android:id="@+id/btnPerfilCli"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Perfil"
-            android:layout_gravity="end"/>
+            android:layout_gravity="end"
+            android:text="Perfil" />
 
     </LinearLayout>
 
